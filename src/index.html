@@ -4,26 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FBS</title>
-<link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head> <!-- Добавили закрывающий тег head -->
 
 <body>
-    <div class="button-group">
-    <button type="button">Регистрация</button>
-    <button type="button">Аунтификация</button>
-    <button type="button">Аунтификация</button>
-    <form action="/login" method="POST">
-  <div>
-    <label for="user">Логин:</label>
-    <input type="text" id="user" name="username" placeholder="Введите логин" required>
-  </div>
-  
-  <div>
-    <label for="pass">Пароль:</label>
-    <input type="password" id="pass" name="password" placeholder="Введите пароль" required>
-  </div>
-  
-  <button type="submit">Войти</button>
-</form>
+  <div class="auth-container">
+
+    <div class="logo">
+      <img src="logo.png" alt="FBS logo"> <!-- Убрали лишний слэш -->
     </div>
+
+    <h2 id="form-title">Войти в FBS</h2>
+
+    <form id="auth-form">
+
+      <!-- Исправили на email-group -->
+      <div id="email-group" style="display: none;">
+        <input type="email" id="email" placeholder="почта">
+      </div> 
+
+      <div class="input-group"> <!-- Убрали лишнюю 'e' для красоты -->
+        <input type="text" id="username" placeholder="имя пользователя" required>
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="password" placeholder="пароль" required>
+      </div>
+
+      <!-- Исправили ID на те, что в JS -->
+      <button type="submit" id="main-button">войти</button>
+      <button type="button" id="switch-mode">зарегистрироваться</button>
+
+    </form>
+  </div>
+
+  <script src="scripts/main.js"></script>
 </body>
 </html>
